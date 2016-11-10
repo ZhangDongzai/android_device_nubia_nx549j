@@ -118,7 +118,6 @@ BOARD_KERNEL_CMDLINE := console=null androidboot.console=ttyHSL0 androidboot.har
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 2048
-TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := lineageos_nx549j_defconfig
 TARGET_KERNEL_SOURCE := kernel/nubia/msm8953
 
