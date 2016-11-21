@@ -275,6 +275,9 @@
         <item>1</item>
     </integer-array>
 
+    <!-- Boolean indicating whether 802.11r Fast BSS Transition is enabled on this platform -->
+    <bool translatable="false" name="config_wifi_fast_bss_transition_enabled">true</bool>
+
     <!-- Timeout to wait for NTP server response in milliseconds. -->
     <integer name="config_ntpTimeout">20000</integer>
 
