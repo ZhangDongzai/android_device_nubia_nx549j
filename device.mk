@@ -143,7 +143,6 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    libcurl \
     libgnss \
     libgnsspps \
     libsensorndkbridge
@@ -181,11 +180,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
-
-# IPv6
-PRODUCT_PACKAGES += \
-    ebtables \
-    ethertypes
 
 # IRQ balance
 PRODUCT_COPY_FILES += \
@@ -342,9 +336,7 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    libcnefeatureconfig \
-    librmnetctl \
-    libxml2
+    librmnetctl
 
 PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.0 \
