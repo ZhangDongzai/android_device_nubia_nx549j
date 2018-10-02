@@ -198,6 +198,9 @@ BOARD_USES_QCOM_HARDWARE := true
 TARGET_LD_SHIM_LIBS := \
     /vendor/bin/mm-qcamera-daemon|libshim_libc.so
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
+
 # TWRP
 ifeq ($(WITH_TWRP),true)
 include $(DEVICE_PATH)/twrp.mk
