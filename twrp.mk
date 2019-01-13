@@ -14,7 +14,8 @@
 # limitations under the License.
 #
 
-TARGET_RECOVERY_DEVICE_DIRS += $(VENDOR_PATH)/twrp
+TARGET_RECOVERY_DEVICE_DIRS += $(DEVICE_PATH)/twrp
+TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_INCLUDE_CRYPTO := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_THEME := portrait_hdpi
