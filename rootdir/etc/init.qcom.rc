@@ -1053,8 +1053,9 @@ service can /vendor/bin/init.qti.can.sh
 
 service charger /charger
     class charger
-    group system graphics
-    seclabel u:r:healthd:s0
+    user system
+    group system graphics input
+	seclabel u:r:healthd:s0
 
 service vendor.ssr_diag /vendor/bin/ssr_diag
     class late_start
