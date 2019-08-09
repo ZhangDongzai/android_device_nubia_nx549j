@@ -351,7 +351,11 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
+<<<<<<< HEAD
     android.hardware.sensors@1.0-service.nubia8953
+=======
+    android.hardware.sensors@1.0-service
+>>>>>>> 5d9a2c0c (kuntao: Override vendor.sensors-hal-1-0 instead of building custom service)
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
