@@ -5,5 +5,3 @@ allow mm-qcamerad sensorservice_service:service_manager find;
 allow mm-qcamerad system_server:unix_stream_socket { read write };
 
 allow mm-qcamerad sysfs:file r_file_perms;
-
-set_prop(mm-qcamerad, vendor_camera_prop)
