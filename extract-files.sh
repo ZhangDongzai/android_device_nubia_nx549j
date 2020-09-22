@@ -69,6 +69,9 @@ function blob_fixup() {
         product/lib64/lib-imsvideocodec.so)
             "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
             ;;
+        product/lib64/libdpmframework.so)
+            "${PATCHELF}" --add-needed "libshim_dpmframework.so" "${2}"
+            ;;
         vendor/lib/libmmcamera2_sensor_modules.so)
             sed -i 's|/system/etc/camera|/vendor/etc/camera|g' "${2}"
             sed -i 's|/data/misc/camera|/data/vendor/qcam|g' "${2}"
