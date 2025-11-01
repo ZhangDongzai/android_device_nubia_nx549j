@@ -83,7 +83,7 @@ on post-fs-data
     mkdir /data/vendor/qcam 0770 camera camera
 
 #start camera server as daemon
-service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
+service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
@@ -97,7 +97,7 @@ on init
     write /dev/stune/top-app/schedtune.colocate 1
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
-service qfp-daemon /system/vendor/bin/qfp-daemon
+service qfp-daemon /vendor/bin/qfp-daemon
    class late_start
    user system
    group system drmrpc
@@ -134,19 +134,19 @@ service vendor.qseecomd /vendor/bin/qseecomd
 #   user system
 #   group system net_raw
 
-service perfd /system/vendor/bin/perfd
+service perfd /vendor/bin/perfd
    class main
    user root
    disabled
 
-service gamed /system/vendor/bin/gamed
+service gamed /vendor/bin/gamed
    class main
    user system
    group system
    disabled
    socket gamed seqpacket 0640 system system
 
-service thermal-engine /system/vendor/bin/thermal-engine
+service thermal-engine /vendor/bin/thermal-engine
    class main
    user root
    socket thermal-send-client stream 0666 system system
@@ -155,12 +155,12 @@ service thermal-engine /system/vendor/bin/thermal-engine
    socket thermal-send-rule stream 0660 system system
    group root
 
-service time_daemon /system/vendor/bin/time_daemon
+service time_daemon /vendor/bin/time_daemon
    class late_start
    user root
    group root
 
-service audiod /system/vendor/bin/audiod
+service audiod /vendor/bin/audiod
    class late_start
    user system
    group system
@@ -218,7 +218,7 @@ on boot
     setprop vendor.usb.rmnet.inst.name "rmnet"
     setprop vendor.usb.dpl.inst.name "dpl"
 
-service wcnss-service /system/vendor/bin/wcnss_service
+service wcnss-service /vendor/bin/wcnss_service
     class late_start
     user system
     group system wifi radio
@@ -232,7 +232,7 @@ service vendor.imsqmidaemon /system/vendor/bin/imsqmidaemon
     group radio log diag
 
 # imsdatadaemon starts with root and UID will be downgraded to SYSTEM.
-service vendor.imsdatadaemon /system/vendor/bin/imsdatadaemon
+service vendor.imsdatadaemon /vendor/system/bin/imsdatadaemon
     class main
     user system
     socket ims_datad stream 0660 system radio
@@ -242,12 +242,12 @@ service vendor.imsdatadaemon /system/vendor/bin/imsdatadaemon
 on property:vendor.ims.QMI_DAEMON_STATUS=1
     start vendor.imsdatadaemon
 
-service vendor.ims_rtp_daemon /system/vendor/bin/ims_rtp_daemon
+service vendor.ims_rtp_daemon /vendor/bin/ims_rtp_daemon
    class main
    user system
    group radio diag inet log
 
-service vendor.imsrcsservice /system/vendor/bin/imsrcsd
+service vendor.imsrcsservice /vendor/bin/imsrcsd
    class main
    user system
    group radio diag inet log wakelock
@@ -255,13 +255,13 @@ service vendor.imsrcsservice /system/vendor/bin/imsrcsd
 on property:vendor.ims.DATA_DAEMON_STATUS=1
     restart vendor.ims_rtp_daemon
 
-service hbtp /system/vendor/bin/hbtp_daemon
+service hbtp /vendor/bin/hbtp_daemon
     class main
     user system
     group system
     disabled
 
-service ppd /system/vendor/bin/mm-pp-dpps
+service ppd /vendor/bin/mm-pp-dpps
     class late_start
     disabled
     user system
@@ -296,24 +296,24 @@ on charger
     setprop persist.sys.usb.config mass_storage
     start vendor.hvdcp_opti
 
-service dts_configurator /system/vendor/bin/dts_configurator
+service dts_configurator /vendor/bin/dts_configurator
     class late_start
     user system
     group media audio
     oneshot
 
-service dtseagleservice /system/vendor/bin/dts_eagle_service
+service dtseagleservice /vendor/bin/dts_eagle_service
     class late_start
     user system
     group audio media
     disabled
 
-service adsprpcd /system/vendor/bin/adsprpcd
+service adsprpcd /vendor/bin/adsprpcd
     class main
     user media
     group media
 
-service vendor.hvdcp_opti /system/vendor/bin/hvdcp_opti
+service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
    class main
    user root
    group system wakelock
@@ -321,12 +321,12 @@ service vendor.hvdcp_opti /system/vendor/bin/hvdcp_opti
 on property:init.svc.dts_configurator=stopped
     start dtseagleservice
 
-service vendor.per_mgr /system/vendor/bin/pm-service
+service vendor.per_mgr /vendor/bin/pm-service
     class core
     user system
     group system net_raw
 
-service vendor.per_proxy /system/vendor/bin/pm-proxy
+service vendor.per_proxy /vendor/bin/pm-proxy
     class core
     user system
     group system
@@ -339,13 +339,13 @@ on property:sys.shutdown.requested=*
     stop vendor.per_proxy
     stop vendor.ims_rtp_daemon
 
-service energy-awareness /system/vendor/bin/energy-awareness
+service energy-awareness /vendor/bin/energy-awareness
     class main
     user root
     group system
     oneshot
 
-service mdtpd /system/vendor/bin/mdtpd
+service mdtpd /vendor/bin/mdtpd
     class late_start
     user root
     group system radio drmrpc
