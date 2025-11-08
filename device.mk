@@ -22,8 +22,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
 
-# call the proprietary setup
-$(call inherit-product-if-exists, vendor/nubia/nx549j/nx549j-vendor.mk)
+# Properties
+-include $(LOCAL_PATH)/vendor_prop.mk
 
 # AAPT
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -402,3 +402,5 @@ PRODUCT_COPY_FILES += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
+# call the proprietary setup
+$(call inherit-product-if-exists, vendor/nubia/nx549j/nx549j-vendor.mk)
