@@ -179,8 +179,12 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # Power
 TARGET_HAS_NO_WLAN_STATS := true
-TARGET_TAP_TO_WAKE_NODE := "/sys/board_properties/tpd_suspend_status"
 TARGET_USES_INTERACTION_BOOST := true
+TARGET_POWERHAL_VARIANT := qcom
+TARGET_TAP_TO_WAKE_NODE := "/sys/devices/soc/78b7000.i2c/i2c-3/3-0020/input/input1/wake_gesture"
+
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
@@ -196,13 +200,6 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
-
-# Power
-TARGET_POWERHAL_VARIANT := qcom
-TARGET_TAP_TO_WAKE_NODE := "/sys/devices/soc/78b7000.i2c/i2c-3/3-0020/input/input1/wake_gesture"
-
-# Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Shim
 TARGET_LD_SHIM_LIBS := \
