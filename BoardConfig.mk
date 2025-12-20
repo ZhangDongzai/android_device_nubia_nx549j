@@ -105,10 +105,6 @@ QCOM_BT_READ_ADDR_FROM_PROP := true
 BOARD_QTI_CAMERA_32BIT_ONLY := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
-# CMHW
-BOARD_HARDWARE_CLASS += \
-    hardware/lineage/lineagehw
-
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
@@ -157,9 +153,6 @@ TARGET_KERNEL_SOURCE := kernel/nubia/msm8953
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
-
-# Lineage Hardware
-JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(DEVICE_PATH)/lineagehw|**/*.java
 
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
