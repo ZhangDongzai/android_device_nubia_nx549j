@@ -118,11 +118,6 @@ TARGET_ENABLE_MEDIADRM_64 := true
 TARGET_HW_DISK_ENCRYPTION := true
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
-# Fingerprint
-TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
-    /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.0-service.kuntao=24 \
-    /vendor/bin/vfmService=24
-
 # FM
 BOARD_HAVE_QCOM_FM := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
