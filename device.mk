@@ -120,7 +120,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.nubia
+    android.hardware.biometrics.fingerprint@2.1-service.nubia \
+    libunwind
 
 # For config.fs
 PRODUCT_PACKAGES += \
