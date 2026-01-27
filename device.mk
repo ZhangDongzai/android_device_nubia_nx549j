@@ -120,8 +120,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.nubia \
-    libunwind
+    android.hardware.biometrics.fingerprint@2.1-service.nubia
 
 # For config.fs
 PRODUCT_PACKAGES += \
@@ -131,6 +130,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
+
+# fwk-detect
+PRODUCT_PACKAGES += \
+    libqti_vndfwk_detect
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -385,6 +388,11 @@ PRODUCT_PACKAGES += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
+
+# VNDK
+PRODUCT_PACKAGES += \
+    vndk-ext \
+    vndk-sp
 
 # Vibrator
 PRODUCT_PACKAGES += \
