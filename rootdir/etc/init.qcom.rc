@@ -676,7 +676,7 @@ service vendor.sensors /vendor/bin/sscrpcd
     group system
     disabled
 
-service vendor.sensors.qti /vendor/bin/sensors.qcom
+service vendor.sensors.qti /vendor/bin/sensors.qti
     class main
     user system
     group system
