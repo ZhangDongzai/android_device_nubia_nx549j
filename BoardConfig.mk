@@ -154,9 +154,6 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := lineageos_nx549j_defconfig
 TARGET_KERNEL_SOURCE := kernel/nubia/msm8953
 
-# Lights
-TARGET_PROVIDES_LIBLIGHT := true
-
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
 
