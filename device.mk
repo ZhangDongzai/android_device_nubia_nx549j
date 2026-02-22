@@ -384,7 +384,8 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    vndk_package
+    vndk-ext \
+    vndk-sp
 
 # Vibrator
 PRODUCT_PACKAGES += \
