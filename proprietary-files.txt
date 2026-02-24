@@ -349,8 +349,8 @@ vendor/lib64/libssd.so|0e988e6ef7b1d356f4b92a26a61b96a840de1d20
 bin/gx_fpd:vendor/bin/gx_fpd
 lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.default.so
 lib64/hw/gxfingerprint.default.so:vendor/lib64/hw/gxfingerprint.default.so
-lib64/libfp_client.so:vendor/lib64/libfp_client.so
-lib64/libfpservice.so:vendor/lib64/libfpservice.so
+lib64/libfp_client.so:vendor/lib64/libfp_client.so|304ce37406c8bf5e723f1e0014d1155e1af4d939
+lib64/libfpservice.so:vendor/lib64/libfpservice.so|184b17dd3c52fb74e3746c9e52436a2a920e63db
 lib64/libfpnav.so:vendor/lib64/libfpnav.so
 
 # Gatekeeper - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
