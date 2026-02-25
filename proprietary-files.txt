@@ -526,11 +526,10 @@ vendor/lib/libvpplibrary.so|816a79fe9a6d30e9402acb767119b9ee1c2c8aea
 vendor/lib/libvqzip.so|24e5eb30e5a2cdb544c8688d81d7cc75a1d85eaf
 vendor/lib64/libgpustats.so|a899ae72983277442cdacf8f43271986c91ce710
 
-# NFC
-lib64/hw/nfc_nci.bcm2079x.default.so:vendor/lib64/hw/nfc_nci.bcm2079x.default.so
-vendor/firmware/Generic_unsigned_70ms.ncd
-vendor/firmware/Generic_unsigned_NVM.ncd
-vendor/firmware/Generic_unsigned_SY.ncd
+# NFC - from kuntao
+vendor/etc/libnfc-brcm-20797b00.conf|9db531a29596093a031d1a918a9e64b4f6745532
+vendor/lib64/hw/nfc_nci.bcm2079x.msm8953.so|c6262f6d125b357f7ff21d5f6b1fba9077f3ed02
+vendor/firmware/BCM20797B0_002.001.043.0005.0010_Generic_NCD_Unsigned_configdata.ncd|0b05f878521cc5e84c70fb35cdf4c56df98c06d3
 
 # Perf - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
 vendor/bin/energy-awareness|d9b3f1cc791e0e9612a5ff5df6836af4c921a52b
