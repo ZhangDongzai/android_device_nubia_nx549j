@@ -29,6 +29,4 @@ allow gx_fpd storage_file:lnk_file read;
 allow gx_fpd mnt_user_file:dir search;
 r_dir_file(gx_fpd, firmware_file)
 
-allow gx_fpd default_android_service:service_manager find;
-
 add_service(gx_fpd, gx_fpd_service);
