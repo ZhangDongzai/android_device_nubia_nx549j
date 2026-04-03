@@ -19,7 +19,7 @@
 set -e
 
 export DEVICE=nx549j
-export VENDOR=nx549j
+export VENDOR=nubia
 
 export DEVICE_BRINGUP_YEAR=2018
 
