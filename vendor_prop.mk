@@ -16,15 +16,16 @@
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
-    af.fast_track_multiplier=2 \
+    af.fast_track_multiplier=1 \
     audio.offload.min.duration.secs=30 \
-    audio.offload.video=false \
-    persist.vendor.audio.fluence.speaker=false \
+    audio.offload.video=true \
+    persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicerec=false \
     persist.vendor.audio.hw.binder.size_kbyte=1024 \
-    ro.af.client_heap_size_kbyte=7168 \
-    ro.vendor.audio.sdk.fluencetype=fluence \
+    ro.config.media_vol_steps=25 \
+    ro.config.vc_call_vol_steps=7 \
+    ro.vendor.audio.sdk.fluencetype=none \
     vendor.audio_hal.period_size=192 \
     vendor.audio.hw.aac.encoder=true \
     vendor.audio.offload.buffer.size.kb=64 \
