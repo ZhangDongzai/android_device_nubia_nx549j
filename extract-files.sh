@@ -73,6 +73,12 @@ function blob_fixup() {
             sed -i 's|/system/etc/camera|/vendor/etc/camera|g' "${2}"
             sed -i 's|/data/misc/camera|/data/vendor/qcam|g' "${2}"
             ;;
+        vendor/lib64/libsettings.so)
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v29.so" "${2}"
+            ;;
+        vendor/lib64/libwvhidl.so)
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
+            ;;
     esac
 }
 
